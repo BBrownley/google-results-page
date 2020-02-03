@@ -28,6 +28,10 @@ h2 {
     margin: 0;
 }
 
+.pl-med {
+    padding-left: 20px;
+}
+
 // BEGIN HEADER ////////////////////////////////////////////////////////
 
 header {
@@ -200,6 +204,16 @@ header {
             color: #666;
         }
     }
+    .app-rating {
+        .fa-star, .fa-star-half-o {
+            color: #E7711B;
+            width: 10px;
+        }
+        &-info {
+            color: #777;
+            padding-left: 3px;
+        }
+    }
 }
 
 // Feedback component
@@ -264,5 +278,91 @@ main {
             padding-left: 20px;
         }
     }
-    padding-bottom: 200px;
+    padding-bottom: 1000px;
 }
+
+.twitter-feed {
+    margin-bottom: 30px;
+    &-header {
+       // background-color: #eee;
+        padding-left: 15px;
+        padding-bottom: 10px;
+        a {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        i {
+            color: #00acee;
+            margin-right: 10px;
+        }
+    }
+    .view-on-twitter {
+        font-size: 18px;
+    }
+}
+
+.tweet-container {
+    display: flex;
+    justify-content: space-between;
+    .tweet {
+        color: #222;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-right: 10px;
+        position: relative;
+        width: 30%;
+        height: 300px;
+
+        .info-wrapper {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            a {
+                //display: inline-block;
+                position: relative;
+                color: #222;
+                &:hover {
+                    text-decoration: underline;
+                    color: #1a0dab;
+                }
+            }
+            .time {
+                font-size: 12px;
+            }
+        }
+
+        >* {
+            //border: 1px solid red;
+        }
+        &:last-of-type {
+            margin-right: 0;
+        }
+        .tweet-link {
+            position: absolute;
+            padding: 125px 88px;
+            //background-color: rgba(0, 0, 0, 0.13);
+        }
+    }
+}
+
+.related-searches {
+    //border: 1px solid black;
+    h3 {
+        font-weight: 100;
+        font-size: 20px;
+    }
+    &-container {
+        .row {
+            margin-bottom: 5px;
+            span {
+                //border: 1px solid blue;
+                display: inline-block;
+                width: 150px;
+            }
+        }
+    }
+}
+
+

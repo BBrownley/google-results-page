@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>wikipedia - Google Search</title>
 </head>
 
 <body>
@@ -21,7 +21,7 @@
                     <a href="#"><img src="/images/googlelogo_color_272x92dp.png" alt=""></a>
                 </div>
                 <div class="search">
-                    <input type="text">
+                    <input type="text" value="wikipedia">
                     <i class="fa fa-search" aria-hidden="true"></i>
                     <i class="fa fa-microphone" aria-hidden="true"></i>
                 </div>
@@ -113,8 +113,8 @@
                     </ul>
                 </div>
                 <span>
-                 <a href="#"><i>Feedback</i></a>
-            </span>
+                    <a href="#"><i>Feedback</i></a>
+                </span>
             </div>
 
             <div class="twitter-feed">
@@ -128,6 +128,9 @@
                 
 
                 <div class="tweet-container">
+                    <div class="tweet-container-next">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </div>
                     <div class="tweet">
 
                         <a href="#" class="tweet-link"></a>
@@ -170,7 +173,30 @@
                 <a href="#" class="view-on-twitter"><i class="fa fa-arrow-right"></i>View on Twitter</a>
             </div>
 
-            <!-- TODO: Image slider -->
+            <div class="query-images pl-med pr-med">
+                <a href="#">Images for wikipedia</a>
+                <div class="images-container">
+                    <div class="image">
+                        <img src="/images/query-image-1.png" alt="image 1">
+                    </div>
+                    <div class="image">
+                        <img src="/images/query-image-2.png" alt="image 2">
+                    </div>
+                    <div class="image">
+                        <img src="/images/query-image-3.png" alt="image 3">
+                    </div>
+                    <div class="image">
+                        <img src="/images/query-image-4.png" alt="image 4">
+                    </div>
+                    <div class="image">
+                        <img src="/images/query-image-5.png" alt="image 5">
+                    </div>
+                </div>
+                <div>
+                    <a href="#"><i class="fa fa-arrow-right"></i> <span>More images for wikipedia</span></a>
+                    <a href="#">Report images</a>
+                </div>
+            </div>
 
             <div class="search-result">
                 <p class="url">en.wikipedia.org › wiki › Wikipedia:About<i class="fa fa-caret-down"></i></p>
@@ -204,6 +230,34 @@
                 <p class="description">The best <strong>Wikipedia</strong> experience on your Mobile device. Ad-free and free of charge, forever. With the official <strong>Wikipedia</strong> app, you can search and explore 40 ...</p>
             </div>
 
+            <div class="all-wiki-sites">
+                <div class="wrapper">
+                    <p>Related search</p>
+                    <p>All wiki sites</p>
+                    <div class="wiki-sites">
+                        <div class="wiki-sites-item">
+                            <div class="image-wrapper"><img src="/images/wikinews.png" alt="Wikinews"></div>
+                            <a href="#">Wikinews</a>
+                        </div>
+                        <div class="wiki-sites-item">
+                            <div class="image-wrapper"><img src="/images/wikitionary.png" alt="Wikitionary"></div>
+                            <a href="#">Wikitionary</a>
+                        </div>
+                        <div class="wiki-sites-item">
+                            <div class="image-wrapper"><img src="/images/wikimedia-commons.png" alt="Wikimedia Commons"></div>
+                            <a href="#">Wikimedia Commons</a>
+                        </div>
+                        <div class="wiki-sites-item">
+                            <div class="image-wrapper"><img src="/images/wikiquote.png" alt="Wikiquote"></div>
+                            <a href="#">Wikiquote</a>
+                        </div>
+                    </div>
+                </div>
+                <span>
+                    <a href="#"><i>Feedback</i></a>
+                </span>
+            </div>
+
             <div class="related-searches pl-med">
                 <h3>Searches related to wikipedia</h3>
                 <div class="related-searches-container">
@@ -225,12 +279,43 @@
                     </div>
                 </div>
             </div>
+
+            <div class="page-nav">
+                <img src="/images/gooooogle.png" alt="gooooogle">
+                <nav>
+                    <ul>
+                        <li class="selected"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">Next</a></li>
+                    </ul>
+                </nav>
+            </div>
             
         </div>
 
 
 
     </main>
+
+    <footer>
+        <div class="wrapper">
+            <div class="location">
+                <i class="fa fa-circle" aria-hidden="true"></i>
+                <strong>Rochester, NY</strong> - Based on your past activity - <a>Use precise location</a> - <a>Learn more</a>
+            </div>
+            <nav>
+                <ul>
+                    <a href="#"><li>Help</li></a>
+                    <a href="#"><li>Send feedback</li></a>
+                    <a href="#"><li>Privacy</li></a>
+                    <a href="#"><li>Terms</li></a>
+                </ul>
+            </nav>
+        </div>
+    </footer>
 
 </body>
 

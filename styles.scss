@@ -32,6 +32,29 @@ h2 {
     padding-left: 20px;
 }
 
+.pr-med {
+    padding-right: 20px;
+}
+
+@mixin next-button {
+    border: 1px solid #eee;
+    background-color: rgba(255, 255, 255, 0.975);
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    height: 40px;
+    width: 40px;
+    transform: translateY(-50%);
+    border-radius: 40px;
+    line-height: 40px;
+    text-align: center;
+    z-index: 10;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
+}
+
 // BEGIN HEADER ////////////////////////////////////////////////////////
 
 header {
@@ -183,7 +206,6 @@ header {
 .search-result {
     margin-bottom: 30px;
     padding: 0 20px;
-    //border: 1px solid blue;
     .url {
         .fa {
             margin-left: 5px;
@@ -199,7 +221,6 @@ header {
         padding-top: 5px;
         .info-row span {
             display: inline-block;
-            //border: 1px solid red;
             min-width: 265px;
             color: #666;
         }
@@ -237,7 +258,6 @@ header {
                 }
                 .fa-angle-down {
                     margin-right: 20px;
-                    //margin-top: 2px;
                 }
             }
         }
@@ -271,20 +291,18 @@ main {
     .wrapper {
         padding-left: 140px;
         width: 640px;
-       // background-color: #eee;
         .results-info {
             color: #333;
             margin-bottom: 20px;
             padding-left: 20px;
         }
     }
-    padding-bottom: 1000px;
+    padding-bottom: 10px;
 }
 
 .twitter-feed {
     margin-bottom: 30px;
     &-header {
-       // background-color: #eee;
         padding-left: 15px;
         padding-bottom: 10px;
         a {
@@ -298,12 +316,31 @@ main {
     }
     .view-on-twitter {
         font-size: 18px;
+        margin-left: 20px;
+        font-size: 16px;
+        i {
+            margin-right: 10px;
+        }
     }
 }
 
 .tweet-container {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 5px;
+    position: relative;
+    &-next {
+        @include next-button;
+        i {
+            font-size: 22px;
+            color: #777;
+        }
+        &:hover {
+            i {
+                color: black;
+            }
+        }
+    }
     .tweet {
         color: #222;
         padding: 15px;
@@ -320,7 +357,6 @@ main {
             flex-direction: column;
             justify-content: space-between;
             a {
-                //display: inline-block;
                 position: relative;
                 color: #222;
                 &:hover {
@@ -332,32 +368,68 @@ main {
                 font-size: 12px;
             }
         }
-
-        >* {
-            //border: 1px solid red;
-        }
         &:last-of-type {
             margin-right: 0;
         }
         .tweet-link {
             position: absolute;
             padding: 125px 88px;
-            //background-color: rgba(0, 0, 0, 0.13);
+        }
+    }
+}
+
+.query-images {
+    margin-bottom: 30px;
+    > a {
+        font-size: 20px;
+    }
+    .images-container {
+        overflow: hidden;
+        display: flex;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        position: relative;
+        .next-image {
+            @include next-button;
+            z-index: 20;
+            
+        }
+        .image {
+            display: inline-block;
+            border: 1px solid #ddd;
+            margin-right: 10px;
+        }
+    }
+    > div:last-of-type {
+        display: flex;
+        justify-content: space-between;
+        > a:first-of-type {
+            font-size: 16px;
+            i {
+                margin-right: 5px;
+            }
+        }
+        > a:last-of-type {
+            margin-right: 15px;
+            color: #777;
+            &:hover {
+                color: #111;
+                text-decoration: none;
+            }
         }
     }
 }
 
 .related-searches {
-    //border: 1px solid black;
     h3 {
         font-weight: 100;
         font-size: 20px;
+        margin-bottom: 15px;
     }
     &-container {
         .row {
             margin-bottom: 5px;
             span {
-                //border: 1px solid blue;
                 display: inline-block;
                 width: 150px;
             }
@@ -365,4 +437,139 @@ main {
     }
 }
 
+.all-wiki-sites {
+    .wrapper {
+        border: 1px solid #DDD;
+        border-radius: 10px;
+        padding: 16px 20px;
+        width: 600px;
+        p:nth-of-type(1) {
+            color: #555;
+        }
+        p:nth-of-type(2) {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+        .wiki-sites {
+            display: flex;
+            &-item {
+                flex-shrink: 1;
+                width: 100px;
+                .image-wrapper {
+                    height: 72px;
+                    width: 72px;
+                    background-size: cover;
+                    background-position: center;
+                    overflow: hidden;
+                    display: block;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    span {
+        display: block;
+        text-align: right;
+        padding-top: 2px;
+        padding-right: 12px;
+        a {
+            color: gray;
+            font-size: 12px;
+        }
+    }
+}
 
+.page-nav {
+    margin-top: 30px;
+    text-align: center;
+    position: relative;
+    //border: 1px solid red;
+    img {
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -10;
+        //border: 1px solid blue;
+    }
+    nav {
+        //border: 1px solid green;
+        display: inline-block;
+        padding-left: 75px;
+        
+        ul {
+            //border: 1px solid blue;
+            padding-left: 0;
+            li {
+                //border: 1px solid red;
+                display: inline-flex;
+                height: 50px;
+                &:last-of-type {
+                    margin-left: 50px;
+                    // text-align: center;
+                    // // i {
+                    // //     display: block;
+                    // //     padding-bottom: 10px;
+                    // // }
+                    // a {
+                    //     padding: 0;
+                    // }
+                }
+                &[class*="selected"] {
+                    a {
+                        color: black;
+                    }
+                    a:hover {
+                        cursor: text;
+                        text-decoration: none;
+                    }
+                }
+                a {
+                    height: 10%;
+                    padding: 35px 4.25px 10px 4.25px;
+                    //align-self: flex-end;
+                }
+            }
+        }
+    }
+}
+
+// BEGIN FOOTER ////////////////////////////////////////////////////////
+
+footer {
+    background-color: rgb(240, 240, 240);
+    padding: 5px 0 10px 0;
+    font-size: 14px;
+    color: #555;
+    a {
+        color: #555;
+        &:hover {
+            text-decoration: none;
+            cursor: pointer;
+            color: black;
+        }
+    }
+    .wrapper {
+        padding-left: 140px;
+        .location {
+            margin-left: 20px;
+            .fa-circle {
+                color: #9e9e9e;
+            }
+            strong {
+                color: #222;
+            }
+        }
+    }
+    nav {
+        ul {
+            margin-bottom: 0;
+            padding: 0;
+            display: flex;
+            li {
+                display: inline-block;
+                padding: 2px 20px;
+            }
+        }
+    }
+}
